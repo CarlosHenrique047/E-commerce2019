@@ -26,7 +26,7 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('signup_page.php');
+		$this->load->view('home_page.php');
 	}
 
 	public function signup(){

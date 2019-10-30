@@ -15,10 +15,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<form class="login-form">
 	<input type="text" placeholder="Usuário"/>
 	<input type="password" placeholder="Senha"/>
-	<button class="entrar">entrar</button>
-	<button class="cadastrar" onclick="<?php echo base_url('signup');?>">cadastrar</button>
-	<p class="message">Esqueceu sua senha? <a href="#">Clique aqui</a></p>
+	<input type="submit" value="entrar" class="entrar">
+	
 	</form>
+	<form action="<?php echo base_url('signup');?>">
+		<input type="submit" value="cadastrar" class="cadastrar" href="<?php echo base_url('signup');?>">
+	</form>
+	
+	<p class="message">Esqueceu sua senha? <a href="#">Clique aqui</a></p>
   </div>
 </div>
 
