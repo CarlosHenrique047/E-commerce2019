@@ -11,7 +11,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="body-content">
   <div class="module">
-    <h1>Registre-se</h1>
     <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
       <input type="text" placeholder="CPF" name="cpf" required />
@@ -19,9 +18,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <input type="email" placeholder="Email" name="email" required />
       <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
       <input type="date" placeholder="idade" name="idade" required />
-      <input type="text" placeholder="endereco" name="endereco" required />
+      <input type="text" placeholder="Endereco" name="endereco" required />
+    
+      <select name="sexo">
+          <option value="Homem">Homem</option>
+          <option value="Mulher">Mulher</option>
+          <option value="Outro">Outro</option>
+      </select>
 
-
+      Preferencias de compra:
+      <div class="checkboxOption"><input type="checkbox" name="livro">Livro</div>
+      <div class="checkboxOption"><input type="checkbox" name="jogos">Jogos</div>
+      <div class="checkboxOption"><input type="checkbox" name="moveis">Móveis</div>
+      <div class="checkboxOption"><input type="checkbox" name="eletrodomesticos">Eletrodomésticos</div>
+      <div class="checkboxOption"><input type="checkbox" name="brinquedos">Brinquedos</div>
+      <div class="checkboxOption"><input type="checkbox" name="informatica">Informática</div>
 
       <input type="submit" value="Registrar" name="register" class="btn btn-block btn-primary" />
       <input type="button" value="Limpar" name="limpar" class="btn btn-block btn-primary" />
