@@ -29,7 +29,7 @@ class Home extends CI_Controller {
 		$this->load->view('Home_page.php');
 	}
 
-	public function login(){
-		echo "faz loogin aqui";
+	public function signup(){
+		$this->load->view('signup_page.php');
 	}
 }

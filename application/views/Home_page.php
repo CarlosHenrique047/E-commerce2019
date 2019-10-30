@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<input type="text" placeholder="Usuário"/>
 	<input type="password" placeholder="Senha"/>
 	<button class="entrar">entrar</button>
-	<button class="cadastrar">cadastrar</button>
+	<button class="cadastrar" onclick="<?php echo base_url('signup');?>">cadastrar</button>
 	<p class="message">Esqueceu sua senha? <a href="#">Clique aqui</a></p>
 	</form>
   </div>
