@@ -15,7 +15,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<form class="login-form">
 	<input type="text" placeholder="Usuário"/>
 	<input type="password" placeholder="Senha"/>
-	<button>entrar</button>
+	<button class="entrar">entrar</button>
+	<button class="cadastrar">cadastrar</button>
 	<p class="message">Esqueceu sua senha? <a href="#">Clique aqui</a></p>
 	</form>
   </div>
