@@ -36,4 +36,8 @@ class Home extends CI_Controller {
 	public function signup(){
 		$this->load->view('signup_page.php');
 	}
+
+	public function consultar(){
+		$this->load->view('consultar_usuarios.php');
+	}
 }

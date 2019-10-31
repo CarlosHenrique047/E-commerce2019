@@ -40,10 +40,6 @@ body, html {
       background-color: #AA00FF;
   }
 
-  .btn-cadastrar:hover{
-      margin-top: 20px;
-  }
-
   .btn-consultar{
     box-shadow: 5px 10px rgb(158, 13, 79);
       background-color: #C51162;

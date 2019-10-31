@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="vertical-center"> 
   <div class="container">
     <a href="<?php echo base_url('signup');?>"><span class="btn-cadastrar">cadastrar</span></a>
-    <a href="#"><span class="btn-consultar">consultar</span></a>
+    <a href="<?php echo base_url('consultar');?>"><span class="btn-consultar">consultar</span></a>
     <a href="#"><span class="btn-estatisticas">estatísticas</span></a>
     <a href="<?php echo base_url('index');?>"><span class="btn-sair">sair</span></a>
   </div>
