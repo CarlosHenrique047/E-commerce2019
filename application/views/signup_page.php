@@ -26,13 +26,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <option value="Outro">Outro</option>
       </select>
 
-      Preferencias de compra:
-      <div class="checkboxOption"><input type="checkbox" name="livro">Livro</div>
-      <div class="checkboxOption"><input type="checkbox" name="jogos">Jogos</div>
-      <div class="checkboxOption"><input type="checkbox" name="moveis">Móveis</div>
-      <div class="checkboxOption"><input type="checkbox" name="eletrodomesticos">Eletrodomésticos</div>
-      <div class="checkboxOption"><input type="checkbox" name="brinquedos">Brinquedos</div>
-      <div class="checkboxOption"><input type="checkbox" name="informatica">Informática</div>
+      <div class="div-preferencias">
+        <h2>Preferencias de compra:</h2>
+        <div class="checkboxOption"><input type="checkbox" name="livro">Livro</div>
+        <div class="checkboxOption"><input type="checkbox" name="jogos">Jogos</div>
+        <div class="checkboxOption"><input type="checkbox" name="moveis">Móveis</div>
+        <div class="checkboxOption"><input type="checkbox" name="eletrodomesticos">Eletrodomésticos</div>
+        <div class="checkboxOption"><input type="checkbox" name="brinquedos">Brinquedos</div>
+        <div class="checkboxOption"><input type="checkbox" name="informatica">Informática</div>
+      </div>
 
       <input type="submit" value="Registrar" name="register" class="btn btn-block btn-primary" />
       <input type="button" value="Limpar" name="limpar" class="btn btn-block btn-primary" />
