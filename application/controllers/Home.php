@@ -29,6 +29,10 @@ class Home extends CI_Controller {
 		$this->load->view('home_page.php');
 	}
 
+	public function login(){
+		$this->load->view('menu_admin.php');
+	}
+
 	public function signup(){
 		$this->load->view('signup_page.php');
 	}

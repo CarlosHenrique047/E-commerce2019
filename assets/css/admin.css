@@ -1,0 +1,72 @@
+body, html {
+    height: 100%;
+  }
+  
+  body {
+      font-family: "Roboto", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;      
+      background-image: url("../img/4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      font: 13px/20px normal Helvetica, Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .vertical-center{
+    display: flex;
+  }
+
+  .container{
+      padding: 100px 0px;
+    background-color: rgba(255,255,255,0.6);
+    display: flex;
+    justify-content: space-around;
+  }
+
+  span{
+    color: white;
+    padding: 25px 3vw;
+    text-transform: uppercase;
+  }
+
+  a:hover span{
+      margin-top: 20px;
+  }
+
+  .btn-cadastrar{
+      box-shadow: 5px 10px rgb(116, 2, 173);
+      background-color: #AA00FF;
+  }
+
+  .btn-cadastrar:hover{
+      margin-top: 20px;
+  }
+
+  .btn-consultar{
+    box-shadow: 5px 10px rgb(158, 13, 79);
+      background-color: #C51162;
+  }
+  
+  .btn-estatisticas{
+      box-shadow: 5px 10px rgb(19, 25, 95);
+      background-color: #1A237E;
+  }
+  
+  .btn-sair{
+      box-shadow: 5px 10px rgb(153, 0, 0);
+      background-color: #D50000;
+  }
+  
+  a{
+    text-decoration: none !important;
+  }
+  .vertical-center {
+    background: transparent !important;
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
