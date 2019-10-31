@@ -1,23 +1,31 @@
-body, html {
+    body, html {
     height: 100%;
-  }
-  
-  body {
-      font-family: "Roboto", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;      
-      background-image: url("../img/3.jpg");
+    }
+
+    body {
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+    background-image: url("../img/3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-      font: 13px/20px normal Helvetica, Arial, sans-serif;
+    font: 13px/20px normal Helvetica, Arial, sans-serif;
     overflow: hidden;
-  }
+    }
 
-  .table{
-      background-color: rgba(255, 255, 255, 0.8);
-  }
+    .table{
+        background-color: rgba(255, 255, 255, 0.8);
+    }
 
-  .container{
-      margin-top: 10vh;
-  }
+    .container{
+        margin-top: 10vh;
+    }
+
+    tr:nth-child(even) {
+        background: rgba(190, 190, 190, 0.8);
+      }
+
+    thead tr{
+        background: rgba(255, 255, 255, 0.75);
+    }

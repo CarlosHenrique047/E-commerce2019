@@ -18,6 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <th scope="col">CPF</th>
       <th scope="col">Nome</th>
       <th scope="col">E-mail</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -26,18 +27,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <td>238.893.430-31</td>
       <td>Otto</td>
       <td>teste@mdo.com</td>
+      <td><button>Editar</button><button>Deletar</button></td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>866.422.460-98</td>
       <td>Thornton</td>
       <td>teste@fat.com</td>
+      <td><button>Editar</button><button>Deletar</button></td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>698.360.400-80</td>
       <td>the Bird</td>
       <td>teste@twitter.com</td>
+      <td><button>Editar</button><button>Deletar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>421.523.643-12</td>
+      <td>Robert</td>
+      <td>teste@facebook.com</td>
+      <td><button>Editar</button><button>Deletar</button></td>
     </tr>
   </tbody>
   </table>
