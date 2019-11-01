@@ -58,3 +58,4 @@ $route['signup'] = 'home/signup';
 $route['login'] = 'home/login';
 $route['index'] = 'home/index';
 $route['consultar'] = 'home/consultar';
+$route['estatisticas'] = 'home/estatisticas';

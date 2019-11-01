@@ -40,4 +40,8 @@ class Home extends CI_Controller {
 	public function consultar(){
 		$this->load->view('consultar_usuarios.php');
 	}
+
+	public function estatisticas(){
+		$this->load->view('estatisticas.php');
+	}
 }
