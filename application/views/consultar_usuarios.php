@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <th scope="col">CPF</th>
       <th scope="col">Nome</th>
       <th scope="col">E-mail</th>
-      <th scope="col"></th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
