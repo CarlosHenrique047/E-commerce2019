@@ -34,3 +34,8 @@
     thead tr{
         background: rgba(255, 255, 255, 0.75);
     }
+
+    button{
+        background-color: transparent;
+        border: none;
+    }

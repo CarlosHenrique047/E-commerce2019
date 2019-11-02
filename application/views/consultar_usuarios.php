@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Welcome to CodeIgniter</title>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/consultar.css'); ?>">	
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1380bcc4e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -27,112 +28,112 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <td>238.893.430-31</td>
       <td>Otto</td>
       <td>teste@mdo.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>866.422.460-98</td>
       <td>Thornton</td>
       <td>teste@fat.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>698.360.400-80</td>
       <td>the Bird</td>
       <td>teste@twitter.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>421.523.643-12</td>
       <td>Robert</td>
       <td>teste@facebook.com</td>
-      <td><button>Editar</button><button>Deletar</button></td>
+      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
   </tbody>
   </table>
