@@ -22,6 +22,22 @@ class Post_model extends CI_Model{
         return $this->db->insert('usuarios', $dados);
     }
 
+    public function qtdhomem(){
+        $this->db->select('count(*)');
+        $this->db->from('usuarios');
+        $this->db->where('sexo','Homem');
+        $query = $this->db->get();
+         echo $query->num_rows();
+    }
+
+    public function qtdmulher(){
+        $this->db->select('count(*)');
+        $this->db->from('usuarios');
+        $this->db->where('sexo','Homem');
+        $query = $this->db->get();
+         echo $query->num_rows();
+    }
+
    
 
 }

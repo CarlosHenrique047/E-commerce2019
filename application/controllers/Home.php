@@ -42,6 +42,10 @@ class Home extends CI_Controller {
 	}
 
 	public function estatisticas(){
+		$this->load->model('Post_model');
+		$this->Post_model->qtdhomem();
+		$this->Post_model->qtdmulher();
+
 		$this->load->view('estatisticas.php');
 	}
 
@@ -49,23 +53,23 @@ class Home extends CI_Controller {
 	{
         $this->load->model('Post_model');
         $cpf = $_POST["cpf"];
-        $nome_completo = $_POST["username"];
+        $nome_completo = $_POST["nome_completo"];
         $email = $_POST['email'];
-        $senha = $_POST['password'];
+        $senha = $_POST['senha'];
         $idade = $_POST['idade'];
         $endereco = $_POST['endereco'];
         $preferencias = "todos";
         $sexo = $_POST['sexo'];
 
-        $this->post_model->cpf = $cpf;
-        $this->post_model->username = $nome_completo;
-        $this->post_model->email = $email;
-        $this->post_model->password = $senha;
-        $this->post_model->idade = $idade;
-        $this->post_model->endereco = $endereco;
-        $this->post_model->preferencias = $preferencias;
-        $this->post_model->sexo = $sexo;
+        $this->Post_model->cpf = $cpf;
+        $this->Post_model->nome_completo = $nome_completo;
+        $this->Post_model->email = $email;
+        $this->Post_model->senha = $senha;
+        $this->Post_model->idade = $idade;
+        $this->Post_model->endereco = $endereco;
+        $this->Post_model->preferencias = $preferencias;
+        $this->Post_model->sexo = $sexo;
 
         $this->Post_model->inserir();
-    }
+	}
 }
