@@ -43,10 +43,16 @@ class Home extends CI_Controller {
 
 	public function estatisticas(){
 		$this->load->model('Post_model');
-		$this->Post_model->qtdhomem();
-		$this->Post_model->qtdmulher();
+		$qtdH = $this->Post_model->qtdhomem();
+		$qtdM = $this->Post_model->qtdmulher();
+		$data["qtdH"] = $qtdH;
+		$data["qtdM"] = $qtdM;
 
-		$this->load->view('estatisticas.php');
+		$age = $this->Post_model->idade();
+
+		$data["age"] = $age;
+
+		$this->load->view('estatisticas.php', $data);
 	}
 
 	public function salvar()

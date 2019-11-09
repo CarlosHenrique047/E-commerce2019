@@ -26,16 +26,26 @@ class Post_model extends CI_Model{
         $this->db->select('count(*)');
         $this->db->from('usuarios');
         $this->db->where('sexo','Homem');
-        $query = $this->db->get();
-         echo $query->num_rows();
+        $query = $this->db->count_all_results();
+        return $query;
     }
 
     public function qtdmulher(){
         $this->db->select('count(*)');
         $this->db->from('usuarios');
-        $this->db->where('sexo','Homem');
-        $query = $this->db->get();
-         echo $query->num_rows();
+        $this->db->where('sexo','Mulher');
+        $query = $this->db->count_all_results();
+        return $query;
+    }
+
+    public function idade(){
+        $query = $this->db->get('usuarios');
+
+        foreach ($query->result() as $row)
+        {
+                echo $row->title;
+        }
+        
     }
 
    

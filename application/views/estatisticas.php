@@ -6,6 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/estatisticas.css'); ?>">
+
 	<!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -16,8 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         data.addColumn('string', 'Pessoa');
         data.addColumn('number', 'Sexo');
         data.addRows([
-          ['Homens', 3],
-          ['Mulheres', 10]
+          ['Homens', <?php echo $qtdH; ?> ],
+          ['Mulheres', <?php echo $qtdM; ?> ]
         ]);
         var options = {'title':'Homens x Mulheres',
                        'width':400,
@@ -60,7 +61,7 @@ function drawChart() {
 
     <div class="container-media">
       <h1>Média de idades</h1>
-      <p class="media-idades"> <?php echo "25"; ?> </p>
+      <p class="media-idades"> <?php echo $age; ?> </p>
     </div>
 
     <div id="chart_div2"></div>

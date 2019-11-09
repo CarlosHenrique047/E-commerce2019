@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <input type="text" placeholder="Nome" name="nome_completo" required />
       <input type="email" placeholder="Email" name="email" required />
       <input type="password" placeholder="Password" name="senha" autocomplete="new-password" required />
-      <input type="date" placeholder="idade" name="idade" required />
+      <input type="text" placeholder="idade" name="idade" required />
       <input type="text" placeholder="Endereco" name="endereco" required />
     
       <select name="sexo">
