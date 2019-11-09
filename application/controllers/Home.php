@@ -44,4 +44,28 @@ class Home extends CI_Controller {
 	public function estatisticas(){
 		$this->load->view('estatisticas.php');
 	}
+
+	public function salvar()
+	{
+        $this->load->model('Post_model');
+        $cpf = $_POST["cpf"];
+        $nome_completo = $_POST["username"];
+        $email = $_POST['email'];
+        $senha = $_POST['password'];
+        $idade = $_POST['idade'];
+        $endereco = $_POST['endereco'];
+        $preferencias = "todos";
+        $sexo = $_POST['sexo'];
+
+        $this->post_model->cpf = $cpf;
+        $this->post_model->username = $nome_completo;
+        $this->post_model->email = $email;
+        $this->post_model->password = $senha;
+        $this->post_model->idade = $idade;
+        $this->post_model->endereco = $endereco;
+        $this->post_model->preferencias = $preferencias;
+        $this->post_model->sexo = $sexo;
+
+        $this->Post_model->inserir();
+    }
 }

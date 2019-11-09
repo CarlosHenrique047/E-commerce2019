@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="body-content">
   <div class="module">
-    <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
+    <form class="form" action="<?php base_url(); ?>home/salvar" method="POST" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
       <input type="text" placeholder="CPF" name="cpf" required />
       <input type="text" placeholder="Nome" name="username" required />
