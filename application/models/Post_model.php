@@ -39,15 +39,23 @@ class Post_model extends CI_Model{
     }
 
     public function idade(){
+        $this->db->select_sum('idade', 'idadetotal');
         $query = $this->db->get('usuarios');
+        $result = $query->result();
 
-        foreach ($query->result() as $row)
-        {
-                echo $row->title;
-        }
         
+        $idade = $this->db->get('usuarios');
+        $numidades = $idade->num_rows();
+
+        return ($result[0]->idadetotal / $numidades);
     }
 
+    public function usuarios_list(){
+        $this->db->from('usuarios');
+        $this->db->order_by("nome_completo", "asc");
+        $query = $this->db->get(); 
+        return $query;
+    }
    
 
 }

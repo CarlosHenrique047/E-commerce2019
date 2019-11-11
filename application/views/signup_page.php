@@ -13,11 +13,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="module">
     <form class="form" action="<?=base_url();?>home/salvar" method="POST" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
-      <input type="text" placeholder="CPF" name="cpf" required />
-      <input type="text" placeholder="Nome" name="nome_completo" required />
+      <input type="text" placeholder="CPF" name="cpf" minlength=11 maxlength="11" required />
+      <input type="text" placeholder="Nome" name="nome_completo" minlength=30 required />
       <input type="email" placeholder="Email" name="email" required />
-      <input type="password" placeholder="Password" name="senha" autocomplete="new-password" required />
-      <input type="text" placeholder="idade" name="idade" required />
+      <input type="password" placeholder="Password" name="senha" autocomplete="new-password" minlength=6 maxlength="6" required />
+      <input type="text" placeholder="idade" name="idade" min="1" max="110" required />
       <input type="text" placeholder="Endereco" name="endereco" required />
     
       <select name="sexo">
@@ -28,12 +28,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="div-preferencias">
         <h2>Preferencias de compra:</h2>
-        <div class="checkboxOption"><input type="checkbox" name="livro">Livro</div>
-        <div class="checkboxOption"><input type="checkbox" name="jogos">Jogos</div>
-        <div class="checkboxOption"><input type="checkbox" name="moveis">Móveis</div>
-        <div class="checkboxOption"><input type="checkbox" name="eletrodomesticos">Eletrodomésticos</div>
-        <div class="checkboxOption"><input type="checkbox" name="brinquedos">Brinquedos</div>
-        <div class="checkboxOption"><input type="checkbox" name="informatica">Informática</div>
+        <div class="checkboxOption"><input type="checkbox" value="1" name="livro">Livro</div>
+        <div class="checkboxOption"><input type="checkbox" value="2" name="jogos">Jogos</div>
+        <div class="checkboxOption"><input type="checkbox" value="3" name="moveis">Móveis</div>
+        <div class="checkboxOption"><input type="checkbox" value="4" name="eletrodomesticos">Eletrodomésticos</div>
+        <div class="checkboxOption"><input type="checkbox" value="5" name="brinquedos">Brinquedos</div>
+        <div class="checkboxOption"><input type="checkbox" value="6" name="informatica">Informática</div>
       </div>
 
       <input type="submit" value="Registrar" name="register" class="btn btn-block btn-primary" />

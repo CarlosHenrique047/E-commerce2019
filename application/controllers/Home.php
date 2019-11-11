@@ -38,7 +38,10 @@ class Home extends CI_Controller {
 	}
 
 	public function consultar(){
-		$this->load->view('consultar_usuarios.php');
+		$this->load->model('Post_model');
+		$users = $this->Post_model->usuarios_list();
+		$data["users"] = $users;
+		$this->load->view('consultar_usuarios.php', $data);
 	}
 
 	public function estatisticas(){
@@ -48,9 +51,9 @@ class Home extends CI_Controller {
 		$data["qtdH"] = $qtdH;
 		$data["qtdM"] = $qtdM;
 
-		$age = $this->Post_model->idade();
-
-		$data["age"] = $age;
+		$idades = $this->Post_model->idade();
+		$data["idades"] = $idades;
+	
 
 		$this->load->view('estatisticas.php', $data);
 	}
@@ -65,12 +68,15 @@ class Home extends CI_Controller {
         $idade = $_POST['idade'];
         $endereco = $_POST['endereco'];
         $preferencias = "todos";
-        $sexo = $_POST['sexo'];
+		$sexo = $_POST['sexo'];
+		
+		$criptografada = base64_encode($senha);
+		//base64_decode($criptografada);  para descriptografar a senha
 
         $this->Post_model->cpf = $cpf;
         $this->Post_model->nome_completo = $nome_completo;
         $this->Post_model->email = $email;
-        $this->Post_model->senha = $senha;
+        $this->Post_model->senha = $criptografada;
         $this->Post_model->idade = $idade;
         $this->Post_model->endereco = $endereco;
         $this->Post_model->preferencias = $preferencias;

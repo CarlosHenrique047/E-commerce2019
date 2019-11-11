@@ -38,12 +38,12 @@ function drawChart() {
   data.addColumn('string', 'Pessoa');
   data.addColumn('number', 'Item');
   data.addRows([
-    ['Livro', 1],
-    ['Jogos', 1],
-    ['Móveis', 1],
-    ['Eletrodomésticos', 1],
-    ['Brinquedos', 1],
-    ['Informática', 1]
+    ['Livro', 3],
+    ['Jogos', 2],
+    ['Móveis', 7],
+    ['Eletrodomésticos', 3],
+    ['Brinquedos', 2],
+    ['Informática', 13]
   ]);
   var options = {'title':'Itens Preferidos',
                  'width':540,
@@ -61,7 +61,7 @@ function drawChart() {
 
     <div class="container-media">
       <h1>Média de idades</h1>
-      <p class="media-idades"> <?php echo $age; ?> </p>
+      <p class="media-idades"> <?php echo round($idades);?>  </p>
     </div>
 
     <div id="chart_div2"></div>

@@ -15,126 +15,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">CPF</th>
       <th scope="col">Nome</th>
       <th scope="col">E-mail</th>
-      <th scope="col">Ações</th>
+      <th scope="col">Sexo</th>
     </tr>
   </thead>
   <tbody>
+    <?php
+
+    
+      foreach($users->result_array() as $row){
+        
+    ?>
+
     <tr>
-      <th scope="row">1</th>
-      <td>238.893.430-31</td>
-      <td>Otto</td>
-      <td>teste@mdo.com</td>
+      <td><?php echo $row["cpf"] ?></td>
+      <td><?php echo $row['nome_completo'] ?></td>
+      <td><?php echo $row['email'] ?></td>
+      <td><?php echo $row['sexo'] ?></td>
       <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>866.422.460-98</td>
-      <td>Thornton</td>
-      <td>teste@fat.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>698.360.400-80</td>
-      <td>the Bird</td>
-      <td>teste@twitter.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>421.523.643-12</td>
-      <td>Robert</td>
-      <td>teste@facebook.com</td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
-    </tr>
+
+    <?php
+      }
+    
+    ?>
+
   </tbody>
   </table>
 </div>
