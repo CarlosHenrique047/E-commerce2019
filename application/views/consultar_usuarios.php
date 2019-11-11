@@ -15,10 +15,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <table class="table">
   <thead>
     <tr>
-      <th scope="col">CPF</th>
       <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
       <th scope="col">E-mail</th>
       <th scope="col">Sexo</th>
+      <th scope="col">Opcoes</th>
     </tr>
   </thead>
   <tbody>
@@ -30,11 +31,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     ?>
 
     <tr>
-      <td><?php echo $row["cpf"] ?></td>
       <td><?php echo $row['nome_completo'] ?></td>
+      <td><?php echo $row["cpf"] ?></td>
       <td><?php echo $row['email'] ?></td>
       <td><?php echo $row['sexo'] ?></td>
-      <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar"><i class="fas fa-trash"></i></button></td>
+      <td><a href="<?php echo base_url() . 'home/deletar/' . $row['id_usuario']; ?>" onclick="return confirm('Tem certeza que deseja deletar esse registro?')">[X]</a> <a href="<?php echo base_url() . 'home/editar/' . $row['id_usuario']; ?>">[E]</a></td>
+      <!-- <td><button class="btn-editar"><i class="fas fa-edit"></i></button><button class="btn-deletar" onclick="return confirm('Tem certeza que deseja deletar esse registro?')" ><i class="fas fa-trash"></i></button></td> -->
     </tr>
 
     <?php

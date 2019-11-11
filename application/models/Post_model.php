@@ -56,10 +56,27 @@ class Post_model extends CI_Model{
         $query = $this->db->get(); 
         return $query;
     }
+
+    function deletar($id) {
+        $this->db->where('id_usuario', $id);
+        return $this->db->delete('usuarios');
+    }
    
+
+    function editar($id) {
+        
+        $this->db->where('id_usuario', $id);
+        return $this->db->get('usuarios')->result();
+    }
+
+    function alterar($data) {
+        $this->db->where('id_usuario', $data['id_usuario']);
+        $this->db->set($data);
+        return $this->db->update('usuarios');
+    }
 
 }
 
-// SELECT COUNT(Cliente) AS ClientePaulo FROM Pedidos WHERE Cliente='Paulo'
+
 
 ?>

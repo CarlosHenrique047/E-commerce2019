@@ -84,4 +84,59 @@ class Home extends CI_Controller {
 
         $this->Post_model->inserir();
 	}
+
+	public function deletar($id) {
+		$this->load->model('Post_model');
+		if ($this->Post_model->deletar($id)) {
+			redirect('consultar');
+		} else {
+			log_message('error', 'Erro ao deletar...');
+		}
+	}
+
+	public function editar($id)  {
+		
+		$this->load->model('Post_model');
+		$data['edit_users'] = $this->Post_model->editar($id);
+	 
+		$this->load->view('editar', $data);
+	}
+
+	public function alterar() {
+		$this->load->library('form_validation');
+		$this->form_validation->set_error_delimiters('', '');
+		$validations = array(
+			array(
+				'field' => 'nome_completo',
+				'label' => 'Nome',
+				'rules' => 'required|min_length[30]|max_length[80]'
+			),
+			array(
+				'field' => 'email',
+				'label' => 'E-mail',
+				'rules' => 'trim|required|valid_email|max_length[50]'
+			),
+			array(
+				'field' => 'endereco',
+				'label' => 'Endereco',
+				'rules' => 'required|min_length[10]|max_length[150]'
+			)
+		);
+		$this->form_validation->set_rules($validations);
+		if ($this->form_validation->run() == FALSE) {
+			$this->editar($this->input->post('id_usuario'));
+		} else {
+			$data['id_usuario'] = $this->input->post('id_usuario');
+			$data['nome_completo'] = $this->input->post('nome_completo');
+			$data['email'] = $this->input->post('email');
+			$data['endereco'] = $this->input->post('endereco');
+	 
+			$this->load->model('Post_model');
+			if ($this->Post_model->alterar($data)) {
+				redirect('consultar');
+			} else {
+				log_message('error', 'Erro na alteração...');
+			}
+		}
+	}
 }
