@@ -139,6 +139,39 @@ class Post_model extends CI_Model{
             }
         }
 }
+
+    public function login($cpf,$senha){
+        $this->db->select('*');
+        $this->db->from('usuarios');
+        $this->db->where('cpf',$cpf);
+        if($query=$this->db->get()){
+            $data = $query->row();
+            if ($data->senha == $senha){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+
+    public function is_adm($cpf,$senha){
+        $this->db->select('*');
+        $this->db->from('usuarios');
+        $this->db->where('cpf',$cpf);
+        if($query=$this->db->get()){
+            $data = $query->row();
+            if ($data->senha == $senha){
+                if($data->is_admin == 1){
+                    return true;
+                }else{
+                    return false;
+                }
+
+            }else{
+                return false;
+            }
+        }
+    }
 }
 
 

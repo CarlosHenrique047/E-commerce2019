@@ -200,4 +200,30 @@ class Home extends CI_Controller {
 
 		
 	}
+
+	public function login_site(){
+		$this->load->model('Post_model');
+		$this->load->library('form_validation');
+		$cpf = $_POST['cpf'];
+		$senha = $_POST['senha'];
+		$criptografada = base64_encode($senha);
+
+
+		$valido = $this->Post_model->login($cpf, $criptografada);
+		$is_admin = $this->Post_model->is_adm($cpf, $criptografada);
+		
+		if($valido != false){
+			if($is_admin == true){
+				$logado = true;
+				redirect('menu_admin');
+			}else{
+				$user_logado = true;
+				redirect('editar');
+			}
+			
+		}else{
+			echo "Usuario ou Senha nao estao corretos!";
+		}
+		
+	}
 }
