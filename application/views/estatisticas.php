@@ -38,12 +38,12 @@ function drawChart() {
   data.addColumn('string', 'Pessoa');
   data.addColumn('number', 'Item');
   data.addRows([
-    ['Livro', 3],
-    ['Jogos', 2],
-    ['Móveis', 7],
-    ['Eletrodomésticos', 3],
-    ['Brinquedos', 2],
-    ['Informática', 13]
+    ['Livro', <?php echo $qtdLivros; ?>],
+    ['Jogos', <?php echo $qtdJogos; ?>],
+    ['Móveis', <?php echo $qtdMoveis; ?>],
+    ['Eletrodomésticos', <?php echo $qtdEletrodomesticos; ?>],
+    ['Brinquedos', <?php echo $qtdBrinquedos; ?>],
+    ['Informática', <?php echo $qtdInformatica; ?>]
   ]);
   var options = {'title':'Itens Preferidos',
                  'width':540,

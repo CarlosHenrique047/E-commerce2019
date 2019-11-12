@@ -48,8 +48,21 @@ class Home extends CI_Controller {
 		$this->load->model('Post_model');
 		$qtdH = $this->Post_model->qtdhomem();
 		$qtdM = $this->Post_model->qtdmulher();
+		$qtdLivros = $this->Post_model->qtdLivros();
+		$qtdJogos = $this->Post_model->qtdJogos();
+		$qtdMoveis = $this->Post_model->qtdMoveis();
+		$qtdEletrodomesticos = $this->Post_model->qtdEletrodomesticos();
+		$qtdBrinquedos = $this->Post_model->qtdBrinquedos();
+		$qtdInformatica = $this->Post_model->qtdInformatica();
+
 		$data["qtdH"] = $qtdH;
 		$data["qtdM"] = $qtdM;
+		$data["qtdLivros"] = $qtdLivros;
+		$data["qtdJogos"] = $qtdJogos;
+		$data["qtdMoveis"] = $qtdMoveis;
+		$data["qtdEletrodomesticos"] = $qtdEletrodomesticos;
+		$data["qtdBrinquedos"] = $qtdBrinquedos;
+		$data["qtdInformatica"] = $qtdInformatica;
 
 		$idades = $this->Post_model->idade();
 		$data["idades"] = $idades;
@@ -68,7 +81,14 @@ class Home extends CI_Controller {
         $idade = $_POST['idade'];
         $endereco = $_POST['endereco'];
         $preferencias = "todos";
-		$sexo = $_POST['sexo'];
+		$sexu = $_POST['sexo'];
+
+		if($sexu == '1'){
+			$sexo = "Homem";
+		}else{
+			$sexo = "Mulher";
+		}
+		$is_admin = 0;
 		
 		$criptografada = base64_encode($senha);
 		//base64_decode($criptografada);  para descriptografar a senha
@@ -80,9 +100,25 @@ class Home extends CI_Controller {
         $this->Post_model->idade = $idade;
         $this->Post_model->endereco = $endereco;
         $this->Post_model->preferencias = $preferencias;
-        $this->Post_model->sexo = $sexo;
+		$this->Post_model->sexo = $sexo;
+		$this->Post_model->is_admin = $is_admin;
 
-        $this->Post_model->inserir();
+		$this->Post_model->inserir();
+
+		//adicionar no ultimo id adicionado as preferencias!!!!!
+
+		$ultimoid = $this->db->insert_id();
+		
+		$pref = $_POST["preferencias"];
+		$this->Post_model->id_user = $ultimoid;
+		for ($i=0; $i < count($pref); $i++) { 
+			$id_pref = $pref[$i];
+			$this->Post_model->id_pref = $id_pref;
+			
+			$this->Post_model->inserir_pref();
+		}
+		redirect('consultar');
+		
 	}
 
 	public function deletar($id) {

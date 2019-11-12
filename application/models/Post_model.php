@@ -12,13 +12,16 @@ class Post_model extends CI_Model{
     public $endereco;
     public $preferencias;
     public $sexo;
+    public $is_admin;
+    public $id_pref;
+    public $id_user;
 
     public function __construct(){
         parent::__construct();
     }
 
     public function inserir(){
-        $dados = array('cpf' => $this->cpf, 'nome_completo' => $this->nome_completo, 'email' => $this->email, 'senha' => $this->senha, 'idade' => $this->idade, 'endereco' => $this->endereco, 'preferencias' => $this->preferencias, 'sexo' => $this->sexo);
+        $dados = array('cpf' => $this->cpf, 'nome_completo' => $this->nome_completo, 'email' => $this->email, 'senha' => $this->senha, 'idade' => $this->idade, 'endereco' => $this->endereco, 'preferencias' => $this->preferencias, 'sexo' => $this->sexo, 'is_admin' => $this->is_admin);
         return $this->db->insert('usuarios', $dados);
     }
 
@@ -75,6 +78,53 @@ class Post_model extends CI_Model{
         return $this->db->update('usuarios');
     }
 
+    public function inserir_pref(){
+        $dados = array('id_user' => $this->id_user, 'id_pref' => $this->id_pref);
+        return $this->db->insert('pref_user', $dados);
+    }
+
+    public function qtdLivros(){
+        $this->db->select('count(*)');
+        $this->db->from('pref_user');
+        $this->db->where('id_pref','1');
+        $query = $this->db->count_all_results();
+        return $query;
+    }
+    public function qtdJogos(){
+        $this->db->select('count(*)');
+        $this->db->from('pref_user');
+        $this->db->where('id_pref','2');
+        $query = $this->db->count_all_results();
+        return $query;
+    }
+    public function qtdMoveis(){
+        $this->db->select('count(*)');
+        $this->db->from('pref_user');
+        $this->db->where('id_pref','3');
+        $query = $this->db->count_all_results();
+        return $query;
+    }
+    public function qtdEletrodomesticos(){
+        $this->db->select('count(*)');
+        $this->db->from('pref_user');
+        $this->db->where('id_pref','4');
+        $query = $this->db->count_all_results();
+        return $query;
+    }
+    public function qtdBrinquedos(){
+        $this->db->select('count(*)');
+        $this->db->from('pref_user');
+        $this->db->where('id_pref','5');
+        $query = $this->db->count_all_results();
+        return $query;
+    }
+    public function qtdInformatica(){
+        $this->db->select('count(*)');
+        $this->db->from('pref_user');
+        $this->db->where('id_pref','6');
+        $query = $this->db->count_all_results();
+        return $query;
+    }
 }
 
 
