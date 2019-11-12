@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<input type="submit" value="cadastrar" class="cadastrar" >
 	</form>
 	
-	<p class="message">Esqueceu sua senha? <a href="#">Clique aqui</a></p>
+	<p class="message">Esqueceu sua senha? <a onclick="location.href='<?php echo base_url();?>home/recupera_senha'">Clique aqui</a></p>
   </div>
 </div>
 

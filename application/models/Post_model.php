@@ -125,6 +125,20 @@ class Post_model extends CI_Model{
         $query = $this->db->count_all_results();
         return $query;
     }
+
+    public function recuperar_senha($cpf,$email){
+        $this->db->select('*');
+        $this->db->from('usuarios');
+        $this->db->where('cpf',$cpf);
+        if($query=$this->db->get()){
+            $data = $query->row();
+            if ($data->email == $email){
+                return $data->senha;
+            }else{
+                return false;
+            }
+        }
+}
 }
 
 

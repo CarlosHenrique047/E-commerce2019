@@ -60,3 +60,4 @@ $route['index'] = 'home/index';
 $route['consultar'] = 'home/consultar';
 $route['estatisticas'] = 'home/estatisticas';
 $route['editar'] = 'home/editar';
+$route['recupera_senha'] = 'home/recupera_senha';

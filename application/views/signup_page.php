@@ -52,11 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <input type="checkbox" value='6' name="preferencias[]" id='6'>
           <label for='6'>Informatica</label>
         </div>
-        <!-- <div class="checkboxOption"><input type="checkbox" value="2" name="preferencias[]">Jogos</div>
-        <div class="checkboxOption"><input type="checkbox" value="3" name="preferencias[]">Móveis</div>
-        <div class="checkboxOption"><input type="checkbox" value="4" name="preferencias[]">Eletrodomésticos</div>
-        <div class="checkboxOption"><input type="checkbox" value="5" name="preferencias[]">Brinquedos</div>
-        <div class="checkboxOption"><input type="checkbox" value="6" name="preferencias[]">Informática</div> -->
       </div>
 
       <input type="submit" value="Registrar" name="register" class="btn btn-block btn-primary" />

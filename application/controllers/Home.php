@@ -141,6 +141,7 @@ class Home extends CI_Controller {
 	public function alterar() {
 		$this->load->library('form_validation');
 		$this->form_validation->set_error_delimiters('', '');
+
 		$validations = array(
 			array(
 				'field' => 'nome_completo',
@@ -172,7 +173,31 @@ class Home extends CI_Controller {
 				redirect('consultar');
 			} else {
 				log_message('error', 'Erro na alteração...');
+				redirect('consultar');
 			}
 		}
+	}
+
+	public function recuperar_senha(){
+		$this->load->model('Post_model');
+		$this->load->library('form_validation');
+		$cpf = $_POST['cpf'];
+		$email = $_POST['email'];
+
+		$senha = $this->Post_model->recuperar_senha($cpf, $email);
+		
+		if($senha != false){
+			$decodificada = base64_decode($senha);
+			echo "A senha para este cpf e: ".$decodificada;
+		}else{
+			echo "Dados nao coincidem no banco!";
+		}
+		
+	}
+
+	public function recupera_senha(){
+		$this->load->view('recupera_senha.php');
+
+		
 	}
 }
